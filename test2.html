@@ -12,32 +12,72 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
+<style>
+    body{
+        padding: 1rem;
+    }
+    .title{
+        margin-bottom: 4rem;
+    }
+    .container span{
+        font-weight: bolder;
+    }
+    #icon{
+        color: gray;
+        font-weight: lighter;
+    }
+    label{
+        color: gray;
+        font-weight: lighter;
+    }
+    .form-group span{
+        font-weight: lighter;
+        color: gray;
+        font-size: 1.3rem;
+        line-height: 3rem;
+    }
+    .border{
+        border-bottom: 1px solid rgba(160, 157, 157, 0.356);
+    }
+    .btnn{
+        background-color: rgba(179, 179, 179, 0.315);
+        border-radius: 100px;
+        font-size: large;
+        padding: 2rem 0;
+    }
+    .btnn span{
+        color: gray;
+    }
+</style>
 <body>
     <div class="container">
-        <div class="row d-flex align-items-center">
-            <h2 class="text-center col-sm-10">회원가입</h2>
-            <span class="glyphicon glyphicon-remove col-sm-2"></span>
+        <div class="title">
+            <div class="col-xs-11 text-center">
+                <span>회원가입</span>
+            </div>
+            <div class="col-xs-1"></div>
+            <span id="icon" class="glyphicon glyphicon-remove"></span>
         </div>
         <div class="form-group">
             <label for="exampleInputEmail">이름</label>
             <input type="text" class="form-control" placeholder="이름을 작성해주세요">
-
         </div>
-        
         <div class="form-group">
             <label for="">휴대폰번호</label>
             <select class="form-control" name="" id="">
-                <option value="">1</option>
+                <option value="">대한민국 +82</option>
                 <option value="">2</option>
                 <option value="">3</option>
                 <option value="">4</option>
             </select>
         </div>
-        <div class="row">
-            <input class="col-sm-6" type="text" placeholder="예시:01080283324">
-            <button type="button" class="btn btn-default bg-info col-sm-2">Default</button>
+        <div class="form-group">
+            <input class="form-control row-xs-5" type="text" placeholder="(예시) 01080283324">
+            
         </div>
-        <input type="text" placeholder="인증번호를 입력하세요">
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="인증번호를 입력해 주세요." aria-label="Disabled input example" disabled>
+        </div>
         <div class="form-group">
             <label>비밀번호</label>
             <input type="text" class="form-control" placeholder=" 비밀번호 입력하시오">
@@ -47,22 +87,34 @@
             <label for="">비밀번호 확인</label>
             <input type="text" class="form-control" placeholder="비밀번호룰 다시 한번 입력해 주세요">
         </div>
-        <div class="checkbox">
-            <label for="">
-                <input type="checkbox"> 전체 동의
-            </label>
+        <div class="border">
+            <div class="checkbox">
+                <label for="">
+                    <input type="checkbox"> 전체 동의
+                </label>
+            </div>
         </div>
-        <div class="checkbox">
+        <div class="checkbox d-flex justify-content space-between">
             <label for="">
                 <input type="checkbox"> 개인정보 수집 이용 동의(필수) 
             </label>
+            <div>
+                <a>자세히</a>
+            </div>
         </div>
         <div class="checkbox">
             <label for="">
                 <input type="checkbox" name="" id="">이벤트 소식 등 알림 정보 받기
             </label>
+            <a>자세히</a>
         </div>
-        <button class="btn btn-info btn-lg-"><h1>회원가입</h1></button>
+        <div class="btnn">
+            <div class="row-xs-12 text-center">
+                <span>
+                    회원가입하기
+                </span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
